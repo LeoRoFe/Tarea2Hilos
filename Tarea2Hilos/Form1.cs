@@ -19,7 +19,7 @@ namespace Tarea2Hilos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //Comment como subir a github
         }
     }
 }
