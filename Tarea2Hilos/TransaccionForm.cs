@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tarea2Hilos
 {
-    public partial class Form1 : Form
+    public partial class TransaccionForm : Form
     {
-        public Form1()
+        public TransaccionForm()
         {
             InitializeComponent();
         }
