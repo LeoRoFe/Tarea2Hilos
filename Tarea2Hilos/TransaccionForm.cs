@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tarea2Hilos.Clases;
 
 namespace Tarea2Hilos
 {
     public partial class TransaccionForm : Form
     {
+        Transaccion[] transacciones; //arreglo global.
+        Transaccion[] transaccionesManuales;
+        Transaccion[] transaccionesAutomaticas;
+
         public TransaccionForm()
         {
             InitializeComponent();
@@ -30,7 +35,17 @@ namespace Tarea2Hilos
 
         private void B_AbrirArchivo_Click(object sender, EventArgs e)
         {
-           
+            Archivos archivoNuevo = new Archivos();
+            transacciones = archivoNuevo.ObtenerDatos();
+            if(transacciones == null)
+            {
+                MessageBox.Show("El archivo se encuentra vacío o dañado.");
+            }
+            transaccionesManuales = transacciones.Where(x => x.transmision.Equals("M")).ToArray();
+            transaccionesAutomaticas = transacciones.Where(x => x.transmision.Equals("A")).ToArray();
+
+            DGV_Automaticos.DataSource = transaccionesAutomaticas;
+            DGV_Manuales.DataSource = transaccionesManuales;
         }
     }
 }

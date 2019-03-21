@@ -30,13 +30,13 @@
         {
             this.B_AbrirArchivo = new System.Windows.Forms.Button();
             this.DGV_Automaticos = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.DGV_Manuales = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.DGV_Cola = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Automaticos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Manuales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Cola)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,19 +59,19 @@
             this.DGV_Automaticos.Size = new System.Drawing.Size(584, 213);
             this.DGV_Automaticos.TabIndex = 10;
             // 
-            // dataGridView2
+            // DGV_Manuales
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(667, 148);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(569, 213);
-            this.dataGridView2.TabIndex = 11;
+            this.DGV_Manuales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Manuales.Location = new System.Drawing.Point(667, 148);
+            this.DGV_Manuales.Name = "DGV_Manuales";
+            this.DGV_Manuales.RowTemplate.Height = 28;
+            this.DGV_Manuales.Size = new System.Drawing.Size(569, 213);
+            this.DGV_Manuales.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(663, 125);
+            this.label5.Location = new System.Drawing.Point(126, 125);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(188, 20);
             this.label5.TabIndex = 12;
@@ -80,7 +80,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 125);
+            this.label6.Location = new System.Drawing.Point(842, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(168, 20);
             this.label6.TabIndex = 13;
@@ -113,14 +113,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.DGV_Manuales);
             this.Controls.Add(this.DGV_Automaticos);
             this.Controls.Add(this.B_AbrirArchivo);
             this.Name = "TransaccionForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Automaticos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Manuales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Cola)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -131,7 +131,7 @@
 
         private System.Windows.Forms.Button B_AbrirArchivo;
         private System.Windows.Forms.DataGridView DGV_Automaticos;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView DGV_Manuales;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
