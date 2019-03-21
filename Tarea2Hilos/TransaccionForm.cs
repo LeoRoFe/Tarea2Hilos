@@ -21,5 +21,16 @@ namespace Tarea2Hilos
         {
             //Comment como subir a github
         }
+
+
+        private void B_AgregaTransaccion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void B_AbrirArchivo_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
