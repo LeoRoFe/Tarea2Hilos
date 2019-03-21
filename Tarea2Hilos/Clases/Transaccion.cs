@@ -9,6 +9,5 @@ namespace Tarea2Hilos.Clases
     class Transaccion
     {
         public String tipoTransaccion;
-        public double saldo;
     }
 }

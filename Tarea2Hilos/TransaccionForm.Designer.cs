@@ -29,12 +29,15 @@
         private void InitializeComponent()
         {
             this.B_AbrirArchivo = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGV_Automaticos = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DGV_Cola = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Automaticos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Cola)).BeginInit();
             this.SuspendLayout();
             // 
             // B_AbrirArchivo
@@ -47,14 +50,14 @@
             this.B_AbrirArchivo.UseVisualStyleBackColor = true;
             this.B_AbrirArchivo.Click += new System.EventHandler(this.B_AbrirArchivo_Click);
             // 
-            // dataGridView1
+            // DGV_Automaticos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 148);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(584, 213);
-            this.dataGridView1.TabIndex = 10;
+            this.DGV_Automaticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Automaticos.Location = new System.Drawing.Point(22, 148);
+            this.DGV_Automaticos.Name = "DGV_Automaticos";
+            this.DGV_Automaticos.RowTemplate.Height = 28;
+            this.DGV_Automaticos.Size = new System.Drawing.Size(584, 213);
+            this.DGV_Automaticos.TabIndex = 10;
             // 
             // dataGridView2
             // 
@@ -83,21 +86,42 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Automóviles Manuales";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 385);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(170, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Cola de Transacciones";
+            // 
+            // DGV_Cola
+            // 
+            this.DGV_Cola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Cola.Location = new System.Drawing.Point(22, 411);
+            this.DGV_Cola.Name = "DGV_Cola";
+            this.DGV_Cola.RowTemplate.Height = 28;
+            this.DGV_Cola.Size = new System.Drawing.Size(704, 213);
+            this.DGV_Cola.TabIndex = 15;
+            // 
             // TransaccionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1235, 636);
+            this.ClientSize = new System.Drawing.Size(1273, 636);
+            this.Controls.Add(this.DGV_Cola);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGV_Automaticos);
             this.Controls.Add(this.B_AbrirArchivo);
             this.Name = "TransaccionForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Automaticos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Cola)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,10 +130,12 @@
         #endregion
 
         private System.Windows.Forms.Button B_AbrirArchivo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGV_Automaticos;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView DGV_Cola;
     }
 }
 
