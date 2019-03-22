@@ -13,9 +13,11 @@ namespace Tarea2Hilos
 {
     public partial class TransaccionForm : Form
     {
-        Transaccion[] transacciones; //arreglo global.
-        Transaccion[] transaccionesManuales;
-        Transaccion[] transaccionesAutomaticas;
+        private Transaccion[] transacciones; //arreglo global.
+        private Transaccion[] transaccionesManuales;
+        private Transaccion[] transaccionesAutomaticas;
+        private double MontoTotal = 5000000;//Cuenta 
+        private Semaphore semaforo;
 
         public TransaccionForm()
         {
@@ -46,6 +48,27 @@ namespace Tarea2Hilos
 
             DGV_Automaticos.DataSource = transaccionesAutomaticas;
             DGV_Manuales.DataSource = transaccionesManuales;
+        }
+        
+        private void ComenzarPosteo(){
+            semaforo = new Semaphore(0, 2);
+            //Instancia hilos
+            Thread nuevoHiloA = new Thread(new ParameterizedThreadStart(EjecutarTransacciones));
+            Thread nuevoHiloM = new Thread(new ParameterizedThreadStart(Worker));
+            //inicia hilos
+            nuevoHiloA.Start(transaccionesAutomaticas);
+            nuevoHiloM.Start(transaccionesManuales);
+            //Espera q empicen
+            Thread.Sleep(500);
+            semaforo.Release(2);
+             
+        }
+        
+        private EjecutarTransacciones(Transaccion[] listaTransacciones){
+            semaforo.WaitOne();
+            //codigo q actualiza el total
+            Thread.Sleep(5000); //Espera 5 seg
+        
         }
     }
 }
